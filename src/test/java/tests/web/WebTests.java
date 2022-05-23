@@ -1,4 +1,4 @@
-package tests;
+package tests.web;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.AllureId;
@@ -11,11 +11,11 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import pages.*;
+import pages.web.*;
 
 import static io.qameta.allure.Allure.step;
 
-public class UiTests extends Testbase {
+public class WebTests extends TestbaseWeb {
     //Test data
     String[] nominalForGiftCertificates = {"2000", "8000"};
     String favoriteItem = "Honor",
@@ -144,14 +144,16 @@ public class UiTests extends Testbase {
         });
         step("Убедиться, что в корзине появился сертификат", () -> {
             cartPage.open();
-            cartPage.closePopUp();
+            if (cartPage.popUpCrossElement.exists()) {
+                cartPage.closePopUp();
+            }
             cartPage.checkItem("Электронный подарочный сертификат");
         });
     }
 
     @Test
     @AllureId("10105")
-    @DisplayName("Проверка функции 'Узнать о снижении цены' в разделе подарочных сертификатов")
+    @DisplayName("Функция 'Узнать о снижении цены' в разделе подарочных сертификатов")
     @Tags({@Tag("ui"), @Tag("web")})
     @Story("Ozon основной")
     @Owner("valentin.gordeev")
@@ -174,7 +176,7 @@ public class UiTests extends Testbase {
 
     @Test
     @AllureId("10046")
-    @DisplayName("Проверка подсказки 'Поддержка производителя' у подарочного сертификата")
+    @DisplayName("Подсказки 'Поддержка производителя' у подарочного сертификата")
     @Tags({@Tag("ui"), @Tag("web")})
     @Story("Ozon основной")
     @Owner("valentin.gordeev")
@@ -194,7 +196,7 @@ public class UiTests extends Testbase {
 
     @Test
     @AllureId("10052")
-    @DisplayName("Проверка выпадающих меню в разделе 'Помощь'")
+    @DisplayName("Выпадающие меню в разделе 'Помощь'")
     @Tags({@Tag("ui"), @Tag("web")})
     @Story("Ozon счёт")
     @Owner("valentin.gordeev")
@@ -211,7 +213,6 @@ public class UiTests extends Testbase {
             financePage.checkTextUnderHints();
         });
     }
-
 
     @Test
     @AllureId("10057")
@@ -237,7 +238,7 @@ public class UiTests extends Testbase {
 
     @Test
     @AllureId("10056")
-    @DisplayName("Проверка всех кнопок 'Начать продавать'")
+    @DisplayName("Работоспособность всех кнопок 'Начать продавать'")
     @Tags({@Tag("ui"), @Tag("web")})
     @Story("Ozon Seller")
     @Owner("valentin.gordeev")

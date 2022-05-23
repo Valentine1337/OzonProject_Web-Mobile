@@ -38,9 +38,16 @@ public class Attachments {
     }
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
-    public static String addVideo() {
+    public static String addVideoWeb() {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
                 + getVideoUrl(getSessionId())
+                + "' type='video/mp4'></video></body></html>";
+    }
+
+    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
+    public static String addVideoBrowserstack(String sessionId) {
+        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
+                + BrowserstackVideo.videoUrl(sessionId)
                 + "' type='video/mp4'></video></body></html>";
     }
 
@@ -55,7 +62,7 @@ public class Attachments {
         return null;
     }
 
-    public static String getSessionId(){
+    public static String getSessionId() {
         return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
     }
 }

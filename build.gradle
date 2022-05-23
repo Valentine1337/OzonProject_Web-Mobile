@@ -13,7 +13,11 @@ def junitVersion = "5.8.2",
     allureVersion = "2.17.3",
     slf4jVersion = "1.7.36",
     ownerVersion = "1.0.12",
-    assertjVersion = "3.22.0"
+    assertjVersion = "3.22.0",
+    appiumVersion = "8.0.0",
+    javaFaker = "1.0.2",
+    restAssuredVersion = "5.0.1",
+    commonsIoVersion = "2.11.0"
 
 dependencies {
     testImplementation(
@@ -22,9 +26,11 @@ dependencies {
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
             "org.assertj:assertj-core:$assertjVersion",
-            'io.rest-assured:rest-assured:5.0.1',
+            "io.rest-assured:rest-assured:$restAssuredVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
-            "com.github.javafaker:javafaker:1.0.2"
+            "com.github.javafaker:javafaker:$javaFaker",
+            "io.appium:java-client:$appiumVersion",
+            "commons-io:commons-io:$commonsIoVersion"
 
     )
     testRuntimeOnly(
@@ -40,7 +46,6 @@ allure {
                 adapterVersion.set(allureVersion)
             }
         }
-
     }
     report {
         version.set(allureVersion)
@@ -63,5 +68,16 @@ tasks.withType(Test) {
                 'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
                 'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
         ]
+    }
+}
+
+task web(type: Test) {
+    useJUnitPlatform{
+        includeTags "web"
+    }
+}
+task mobile(type: Test) {
+    useJUnitPlatform{
+        includeTags "mobile"
     }
 }
