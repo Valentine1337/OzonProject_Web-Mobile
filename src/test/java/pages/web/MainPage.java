@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class MainPage {
     private final SelenideElement
             searchBar = $(".search-bar-wrapper").$("input"),
-            submitSearchButton = $(".z1u [type=submit]"),
+            submitSearchButton = $("[data-widget=searchBarDesktop] [type=submit]"),
             cartSelector = $(byText("Корзина")),
             catalogButtonAndCategorySelector = $("div[data-widget=catalogMenu"),
             giftPage = $("div[data-widget=topBar]").$(byText("Подарочные сертификаты")),
