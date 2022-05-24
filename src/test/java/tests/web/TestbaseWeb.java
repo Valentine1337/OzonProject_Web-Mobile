@@ -23,6 +23,7 @@ public class TestbaseWeb {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         //Set settings based on remote or local run
+        Configuration.pageLoadTimeout = 30000;
         Configuration.baseUrl = System.getProperty("standHost");
         if (webSelenideConfig.isRemote()) {
             Configuration.remote = "https://" + webSelenideConfig.selenoidUser() + ":"
