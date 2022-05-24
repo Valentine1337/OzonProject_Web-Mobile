@@ -3,12 +3,9 @@ package configs.web;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:webSelenide.properties"
+        "classpath:configs/webSelenide.properties"
 })
 public interface WebSelenideConfig extends Config {
-    @Key("stand.url")
-    String standUrl();
-
     @Key("browser.name")
     @DefaultValue("chrome")
     String browserName();
@@ -26,8 +23,8 @@ public interface WebSelenideConfig extends Config {
     boolean isRemote();
 
     @Key("selenoid.user")
-    boolean selenoidUser();
+    String selenoidUser();
 
     @Key("selenoid.password")
-    boolean selenoidPassword();
+    String selenoidPassword();
 }
