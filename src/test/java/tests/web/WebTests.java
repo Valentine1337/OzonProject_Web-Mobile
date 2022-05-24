@@ -5,10 +5,7 @@ import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import pages.web.*;
@@ -35,6 +32,7 @@ public class WebTests extends TestbaseWeb {
 
     //Tests
     @ValueSource(strings = {"iPhone 12", "Samsung"})
+    @Disabled
     @ParameterizedTest(name = "Добавление товара \"{0}\" в корзину через поиск")
     @AllureId("10044")
     @Tags({@Tag("ui"), @Tag("web")})
@@ -61,6 +59,7 @@ public class WebTests extends TestbaseWeb {
     }
 
     @Test
+    @Disabled
     @AllureId("10049")
     @DisplayName("Добавление товара в избранное")
     @Tags({@Tag("ui"), @Tag("web")})
@@ -84,6 +83,7 @@ public class WebTests extends TestbaseWeb {
     }
 
     @Test
+    @Disabled
     @AllureId("10048")
     @DisplayName("Добавление нескольких товаров в список сравнения")
     @Tags({@Tag("ui"), @Tag("web")})
@@ -116,6 +116,7 @@ public class WebTests extends TestbaseWeb {
     }
 
     @Test
+    @Disabled
     @AllureId("10045")
     @DisplayName("Добавление подарочных сертификатов с разным номиналом")
     @Tags({@Tag("ui"), @Tag("web")})
@@ -152,6 +153,7 @@ public class WebTests extends TestbaseWeb {
     }
 
     @Test
+    @Disabled
     @AllureId("10105")
     @DisplayName("Функция 'Узнать о снижении цены' в разделе подарочных сертификатов")
     @Tags({@Tag("ui"), @Tag("web")})
@@ -175,6 +177,7 @@ public class WebTests extends TestbaseWeb {
     }
 
     @Test
+    @Disabled
     @AllureId("10046")
     @DisplayName("Подсказки 'Поддержка производителя' у подарочного сертификата")
     @Tags({@Tag("ui"), @Tag("web")})
@@ -195,6 +198,7 @@ public class WebTests extends TestbaseWeb {
     }
 
     @Test
+    @Disabled
     @AllureId("10052")
     @DisplayName("Выпадающие меню в разделе 'Помощь'")
     @Tags({@Tag("ui"), @Tag("web")})
@@ -215,6 +219,7 @@ public class WebTests extends TestbaseWeb {
     }
 
     @Test
+    @Disabled
     @AllureId("10057")
     @DisplayName("Поиск новостей в разделе 'Новости'")
     @Tags({@Tag("ui"), @Tag("web")})
