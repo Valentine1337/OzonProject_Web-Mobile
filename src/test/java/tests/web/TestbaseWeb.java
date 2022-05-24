@@ -23,7 +23,7 @@ public class TestbaseWeb {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         //Set settings based on remote or local run
-        Configuration.baseUrl = "https://www.ozon.ru"; // СДЕЛАТЬ ВЫБОР СТЕНДА В ДЖЕНКИНСЕ
+        Configuration.baseUrl = System.getProperty("standHost");
         if (webSelenideConfig.isRemote()) {
             Configuration.remote = "https://" + webSelenideConfig.selenoidUser() + ":"
                     + webSelenideConfig.selenoidPassword() +
