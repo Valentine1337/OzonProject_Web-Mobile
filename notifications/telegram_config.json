@@ -1,6 +1,6 @@
 {
   "base": {
-    "project": "some project",
+    "project": "Diplom UI tests",
     "environment": "some env",
     "comment": "some comment",
     "reportLink": "",
@@ -11,7 +11,7 @@
   },
   "telegram": {
     "token": "5205245587:AAFQgELYqcZL33a2vmJPBxJtMZ8ehPEiEus",
-    "chat": "-1",
+    "chat": "460473099",
     "replyTo": ""
   }
 }
