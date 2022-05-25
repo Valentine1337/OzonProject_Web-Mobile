@@ -12,7 +12,7 @@
       "allureLinkPath": "allure",
       "chart": true,
       "chartName": "",
-      "project": "Ozon Web and mobile test"
+      "project": "Ozon web/mobile test"
     },
     "mail": {
       "host": "",
