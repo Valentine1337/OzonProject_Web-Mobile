@@ -1,4 +1,4 @@
-# Дипломный проект по тестированию интернет-магазина [Ozon](https://www.ozon.ru/)
+# Проект по автотестированию интернет-магазина [Ozon](https://www.ozon.ru/)
 [<img alt="Ozon" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Ozon.svg.png" width="500"/>](https://www.ozon.ru/)
 
 ## Содержание:
