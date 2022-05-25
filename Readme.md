@@ -1,5 +1,5 @@
 # Дипломный проект по тестированию интернет-магазина [Ozon](https://www.ozon.ru/)
-[<img alt="Java" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Ozon.svg.png" width="500"/>](https://www.java.com/)
+[<img alt="Ozon" height="100" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Ozon.svg.png" width="500"/>](https://www.ozon.ru/)
 
 ## Содержание:
 
@@ -8,6 +8,8 @@
 * [Сборка в Jenkins](https://github.com/Valentine1337/qa_guru_diplom_uiAndMobile#%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D0%B2-jenkins)
 * [Информация о тестах в Allure report]()
 * [Интеграция с AllureTestOps]()
+* [Уведомления в Telegram]()
+* [Пример аттачей]()
 
 ## Технологии, используемые в данном проекте
 
@@ -118,7 +120,7 @@ _Графики мобильных тестов_
 ### Список ручных и автотестов
 ![](images/screenshots/Allure_TO2.jpg)
 
-## Уведомление в Telegram
+## Уведомления в Telegram
 
 После завершения тестов отчет о прохождении приходит в Telegram с помощью заранее созданного бота
 
@@ -126,6 +128,8 @@ _Графики мобильных тестов_
 ![](images/screenshots/telegram-bot.jpg)
 
 ## Пример аттачей
+К каждому тесту в Allure прикрепляется видеопрохождение, скриншот последнего экрана и код страницы
+
 ### Видео прохождения web тестов (пример)
 
 ![](images/screenshots/web.gif)
@@ -133,4 +137,3 @@ _Графики мобильных тестов_
 ### Видео прохождения mobile тестов (пример)
 
 ![](images/screenshots/mobile.gif)
-java "-DprojectName=Ozon project" "-Denv=web" "-DreportLink=https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/10/allure/" "-Dcomm=25.05.2022 deploy" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
