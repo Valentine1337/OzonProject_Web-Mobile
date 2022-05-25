@@ -123,7 +123,7 @@ _Графики мобильных тестов_
 После завершения тестов отчет о прохождении приходит в Telegram с помощью заранее созданного бота
 
 ### Для web тестов
-
+![](images/screenshots/telegram-bot.jpg)
 
 ## Пример аттачей
 ### Видео прохождения web тестов (пример)
@@ -133,3 +133,4 @@ _Графики мобильных тестов_
 ### Видео прохождения mobile тестов (пример)
 
 ![](images/screenshots/mobile.gif)
+java "-DprojectName=Ozon project" "-Denv=web" "-DreportLink=https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/10/allure/" "-Dcomm=25.05.2022 deploy" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar

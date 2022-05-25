@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ComparePage {
     private final SelenideElement
-            compareScreen = $("div[data-widget=webCompare] .ui-ea7");
+            compareScreen = $("div[data-widget=webCompare]");
 
     public void open() {
         Selenide.open("/product/compare");

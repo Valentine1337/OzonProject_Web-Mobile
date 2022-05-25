@@ -1,7 +1,5 @@
 package pages.web;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.*;
@@ -10,10 +8,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class SearchPage {
     private final SelenideElement
-            searchList = $(".widget-search-result-container").$(".iw7"),
             addToCart = $(byText("В корзину")),
-            addToFavoriteButton = $(".widget-search-result-container").$(".o6d button"),
-            additionalMenu = $(".widget-search-result-container").$(".ui-b1 button", 2),
+            addToFavoriteButton = $("[data-widget=searchResultsV2] button", 1),
+            additionalMenu = $("[data-widget=searchResultsV2]").$("button", 2),
             addToCompareButton = $(".ui-k3").$(byText("Добавить в сравнение")),
             comparePopUpMessage = $(byText("Товар добавлен в сравнение"));
 
