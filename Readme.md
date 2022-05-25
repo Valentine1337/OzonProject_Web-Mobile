@@ -127,8 +127,8 @@ _Графики мобильных тестов_
 
 ### Видео прохождения UI тестов (пример)
 
-![](images/screens/web.gif)
+![](images/screenshots/web.gif)
 
 ### Видео прохождения mobile тестов (пример)
 
-![](images/screens/mobile.gif)
+![](images/screenshots/mobile.gif)
