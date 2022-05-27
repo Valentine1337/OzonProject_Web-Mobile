@@ -1,6 +1,5 @@
 package pages.web;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
@@ -15,10 +14,6 @@ public class FavoritePage {
 
     public void open() {
         favoriteSection.click();
-    }
-
-    public void openComparePage() {
-        compareScreen.click();
     }
 
     public void checkFavoriteItem(String item) {
