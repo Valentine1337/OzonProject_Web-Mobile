@@ -66,6 +66,8 @@
 
 ✓ Работоспособность функции 'Скан товара'
 
+[К содержанию ⬆](#содержание)
+
 ## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Jenkins.svg"> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/)
     gradle clean ${TYPE_OF_UI_TESTS}
     -DstandHost=${STAND}
