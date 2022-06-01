@@ -4,12 +4,12 @@
 ## Содержание:
 
 * [Технологии, используемые в данном проекте](#computer-технологии-используемые-в-данном-проекте)
-* [Тест кейсы](https://github.com/Valentine1337/Ozon_Web-Mobile_autotests/blob/master/Readme.md#%D1%82%D0%B5%D1%81%D1%82-%D0%BA%D0%B5%D0%B9%D1%81%D1%8B)
-* [Сборка в Jenkins](https://github.com/Valentine1337/Ozon_Web-Mobile_autotests/blob/master/Readme.md#%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D0%B2-jenkins)
-* [Отчеты и информация о тестах в Allure report](https://github.com/Valentine1337/Ozon_Web-Mobile_autotests/blob/master/Readme.md#%D0%BE%D1%82%D1%87%D0%B5%D1%82%D1%8B-%D0%B8-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE-%D1%82%D0%B5%D1%81%D1%82%D0%B0%D1%85-%D0%B2-allure-report)
-* [Интеграция с AllureTestOps](https://github.com/Valentine1337/Ozon_Web-Mobile_autotests/blob/master/Readme.md#%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-alluretestops)
-* [Уведомления в Telegram](https://github.com/Valentine1337/Ozon_Web-Mobile_autotests/blob/master/Readme.md#%D1%83%D0%B2%D0%B5%D0%B4%D0%BE%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B2-telegram)
-* [Пример аттачей](#пример-аттачей)
+* [Тест кейсы](#clipboard-тест-кейсы)
+* [Сборка в Jenkins](#-сборка-в-jenkins)
+* [Отчеты и информация о тестах в Allure report](#-отчеты-и-информация-о-тестах-в-allure-report)
+* [Интеграция с AllureTestOps](#-интеграция-с-alluretestops)
+* [Уведомления в Telegram](#-уведомления-в-telegram)
+* [Пример аттачей](#movie_camera-пример-аттачей)
 
 ## :computer: Технологии, используемые в данном проекте
 
