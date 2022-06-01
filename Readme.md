@@ -3,10 +3,10 @@
 
 ## Содержание:
 
-* [Технологии, используемые в данном проекте](https://github.com/Valentine1337/qa_guru_diplom_uiAndMobile#%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D0%BC%D1%8B%D0%B5-%D0%B2-%D0%B4%D0%B0%D0%BD%D0%BD%D0%BE%D0%BC-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B5)
+* [Технологии, используемые в данном проекте](##-Технологии-используемые-в-данном-проекте)
 * [Тест кейсы](https://github.com/Valentine1337/qa_guru_diplom_uiAndMobile#%D1%82%D0%B5%D1%81%D1%82-%D0%BA%D0%B5%D0%B9%D1%81%D1%8B)
 * [Сборка в Jenkins](https://github.com/Valentine1337/qa_guru_diplom_uiAndMobile#%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D0%B2-jenkins)
-* [Информация о тестах в Allure report]()
+* [Отчеты и информация о тестах в Allure report]()
 * [Интеграция с AllureTestOps]()
 * [Уведомления в Telegram]()
 * [Пример аттачей]()
@@ -74,23 +74,23 @@
 ![](images/screenshots/Jenkins_2.png)
 В данной сборке указаны следующие параметры:
 
-_${TYPE_OF_UI_TESTS}_ - тип тестов web или mobile (возможен запуск **web тестов** - в **selenoid**,
+`${TYPE_OF_UI_TESTS}` - тип тестов web или mobile (возможен запуск **web тестов** - в **selenoid**,
 **mobile тестов** - в **Browserstack**, на эмуляторе в **Android Studio** c
 помощью сервера **Appium**)
 
-_standHost_ - стенд (опция пустая, добавлена ради эмуляции боевого проекта). Указывается в виде URL **https://www.ozon.ru**, **https://www.test-ozon.ru** как пример.
+`standHost` - стенд (опция пустая, добавлена ради эмуляции боевого проекта). Указывается в виде URL **https://www.ozon.ru**, **https://www.test-ozon.ru** как пример.
 
-_deviceHost_ - хост для мобильных тестов (**Browserstack**, **emulator**)
+`deviceHost` - хост для мобильных тестов (**Browserstack**, **emulator**)
 
-_threads_ - количество потоков для запуска теста (от null до 4)
+`threads` - количество потоков для запуска теста (от null до 4)
 
 Остальные опции настраиваются с помощью файла .properties, пример лежит в папке **resources**.
 
 ![](images/screenshots/Jenkins_2.png)
 
-## Информация о тестах в [Allure report](https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/)
+## Отчеты и информация о тестах в [Allure report](https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/)
 
-### Главное окно
+### Дашбоард
 
 ![](images/screenshots/Allure_1.jpg)
 _Мобильные тесты_
