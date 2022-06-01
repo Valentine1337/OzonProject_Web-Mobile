@@ -88,6 +88,8 @@
 
 ![](images/screenshots/Jenkins_2.png)
 
+[К содержанию ⬆](#содержание)
+
 ## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure.svg"> Отчеты и информация о тестах в [Allure report](https://jenkins.autotests.cloud/job/011_Diplom_UiAndMobile_valentiniam/)
 
 ### Дашбоард
@@ -111,6 +113,8 @@ _Мобильные тесты_
 ![](images/screenshots/Allure_5.jpg)
 _Графики мобильных тестов_
 
+[К содержанию ⬆](#содержание)
+
 ## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Allure_EE.svg"> Интеграция с [AllureTestOps](https://allure.autotests.cloud/project/1329/dashboards)
 
 ### Дашборд проекта
@@ -120,12 +124,15 @@ _Графики мобильных тестов_
 ### Список ручных и автотестов
 ![](images/screenshots/Allure_TO2.jpg)
 
+[К содержанию ⬆](#содержание)
 ## <img width="4%" title="Jenkins" src="https://raw.githubusercontent.com/Valentine1337/qa_guru_diplom_uiAndMobile/master/images/logo/Telegram.svg"> Уведомления в Telegram
 
 После завершения тестов отчет о прохождении приходит в Telegram с помощью заранее созданного бота
 
 ### Для web тестов
 ![](images/screenshots/telegram-bot.jpg)
+
+[К содержанию ⬆](#содержание)
 
 ## :movie_camera: Пример аттачей
 К каждому тесту в Allure прикрепляется видеопрохождение, скриншот последнего экрана и код страницы
