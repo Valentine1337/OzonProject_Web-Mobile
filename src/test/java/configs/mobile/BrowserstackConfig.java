@@ -3,9 +3,7 @@ package configs.mobile;
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@Config.Sources({
-        "classpath:configs/browserstack.properties"
-})
+@Config.Sources({"classpath:configs/browserstack.properties"})
 public interface BrowserstackConfig extends Config {
     @Key("user.name")
     String user();

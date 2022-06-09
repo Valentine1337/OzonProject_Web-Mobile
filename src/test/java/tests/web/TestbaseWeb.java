@@ -12,7 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
-import static configs.web.WebSelenide.webSelenideConfig;
+import static configs.web.Web.webConfig;
 import static io.qameta.allure.Allure.step;
 
 public class TestbaseWeb {
@@ -24,23 +24,23 @@ public class TestbaseWeb {
 
         //Set settings based on remote or local run
         Configuration.baseUrl = System.getProperty("standHost");
-        if (webSelenideConfig.isRemote()) {
-            Configuration.remote = "https://" + webSelenideConfig.selenoidUser() + ":"
-                    + webSelenideConfig.selenoidPassword() +
+        if (webConfig.isRemote()) {
+            Configuration.remote = "https://" + webConfig.selenoidUser() + ":"
+                    + webConfig.selenoidPassword() +
                     "@selenoid.autotests.cloud/wd/hub";
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("browserName", webSelenideConfig.browserName());
-            capabilities.setCapability("browserVersion", webSelenideConfig.browserVersion());
-            capabilities.setCapability("browserSize", webSelenideConfig.browserSize());
+            capabilities.setCapability("browserName", webConfig.browserName());
+            capabilities.setCapability("browserVersion", webConfig.browserVersion());
+            capabilities.setCapability("browserSize", webConfig.browserSize());
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
                     "enableVideo", true
             ));
             Configuration.browserCapabilities = capabilities;
         } else {
-            Configuration.browserSize = webSelenideConfig.browserSize();
-            Configuration.browser = webSelenideConfig.browserName();
-            Configuration.browserVersion = webSelenideConfig.browserVersion();
+            Configuration.browserSize = webConfig.browserSize();
+            Configuration.browser = webConfig.browserName();
+            Configuration.browserVersion = webConfig.browserVersion();
         }
     }
 

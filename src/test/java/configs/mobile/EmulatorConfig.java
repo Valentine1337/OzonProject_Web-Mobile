@@ -3,9 +3,7 @@ package configs.mobile;
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@Config.Sources({
-        "classpath:configs/emulator.properties"
-})
+@Config.Sources({"classpath:configs/emulator.properties"})
 public interface EmulatorConfig extends Config {
     @Key("platform.name")
     String platformName();

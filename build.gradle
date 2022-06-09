@@ -73,6 +73,7 @@ task web(type: Test) {
         includeTags "web"
     }
 }
+
 task mobile(type: Test) {
     useJUnitPlatform{
         includeTags "mobile"

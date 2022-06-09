@@ -1,5 +1,7 @@
 package tests.mobile;
 
+import com.codeborne.selenide.Selenide;
+import io.qameta.allure.Allure;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -23,24 +25,12 @@ public class MobileTests extends TestbaseMobile {
     @Owner("valentin.gordeev")
     @Feature("UI mobile тесты")
     void tranferIconInAdvertisingPageTest() {
-        step("Открыть приложение, закрыть рекламные баннеры", () -> {
-            open();
-        });
-        step("Закрыть выпадающие меню, если они есть", () -> {
-            mainPage.closeAllAdvertising();
-        });
-        step("Кликнуть снизу на кнопку Каталог", () -> {
-            mainPage.openCatalog();
-        });
-        step("Выбрать категорию Одежда и обувь", () -> {
-            catalogPage.selectClothingCategory();
-        });
-        step("Кликнуть на рекламный банер", () -> {
-            catalogPage.clickOnAdvBanner();
-        });
-        step("Убедиться, что значок Поделиться кликабельный", () -> {
-            catalogPage.checkTrancferIcon();
-        });
+        step("Открыть приложение, закрыть рекламные баннеры", (Allure.ThrowableRunnableVoid) Selenide::open);
+        step("Закрыть выпадающие меню, если они есть", mainPage::closeAllAdvertising);
+        step("Кликнуть снизу на кнопку Каталог", mainPage::openCatalog);
+        step("Выбрать категорию Одежда и обувь", catalogPage::selectClothingCategory);
+        step("Кликнуть на рекламный банер", catalogPage::clickOnAdvBanner);
+        step("Убедиться, что значок Поделиться кликабельный", catalogPage::checkTrancferIcon);
     }
 
     @Test
@@ -54,18 +44,10 @@ public class MobileTests extends TestbaseMobile {
             open();
             mainPage.closeAllAdvertising();
         });
-        step("Перейти в раздел лайв видео с главной страницы", () -> {
-            mainPage.openLiveSection();
-        });
-        step("Кликнуть на любой баннер лайв трансляции", () -> {
-            liveTraslationsPage.selectTranslation();
-        });
-        step("Нажать Напомнить о начале", () -> {
-            liveTraslationsPage.clickReminder();
-        });
-        step("Убедиться, что появилось поп-ап сообщение о напоминании", () -> {
-            liveTraslationsPage.checkPopUpMessage();
-        });
+        step("Перейти в раздел лайв видео с главной страницы", mainPage::openLiveSection);
+        step("Кликнуть на любой баннер лайв трансляции", liveTraslationsPage::selectTranslation);
+        step("Нажать 'Напомнить о начале'", liveTraslationsPage::clickReminder);
+        step("Убедиться, что появилось поп-ап сообщение о напоминании", liveTraslationsPage::checkPopUpMessage);
     }
 
     @Test
@@ -79,21 +61,11 @@ public class MobileTests extends TestbaseMobile {
             open();
             mainPage.closeAllAdvertising();
         });
-        step("Зайти в Профиль Ozon", () -> {
-            mainPage.openProfile();
-        });
-        step("Перейти в раздел Пункты выдачи на карте", () -> {
-            profilePage.openDeliveryPoints();
-        });
-        step("Нажать на кнопку меню фильтров", () -> {
-            profilePage.openFilterMenu();
-        });
-        step("Выбрать фильтр 'Пункт выдачи' и применить", () -> {
-            profilePage.selectFilters();
-        });
-        step("Убедиться, что выбранный фильтр подсвечены", () -> {
-            profilePage.checkFilterIsEnabled();
-        });
+        step("Зайти в 'Профиль Ozon'", mainPage::openProfile);
+        step("Перейти в раздел 'Пункты выдачи на карте'", profilePage::openDeliveryPoints);
+        step("Нажать на кнопку 'меню фильтров'", profilePage::openFilterMenu);
+        step("Выбрать фильтр 'Пункт выдачи' и применить", profilePage::selectFilters);
+        step("Убедиться, что выбранный фильтр подсвечен", profilePage::checkFilterIsEnabled);
     }
 
     @Test
@@ -107,15 +79,9 @@ public class MobileTests extends TestbaseMobile {
             open();
             mainPage.closeAllAdvertising();
         });
-        step("Зайти в Моменты", () -> {
-            mainPage.openMomentsSection();
-        });
-        step("Кликнуть на значок +", () -> {
-            mainPage.addMoment();
-        });
-        step("Убедиться, что появилось окно с требованием ввести номер телефона", () -> {
-            authorizationPage.checkHeaderText();
-        });
+        step("Зайти в Моменты", mainPage::openMomentsSection);
+        step("Кликнуть на значок +", mainPage::addMoment);
+        step("Убедиться, что появилось окно с требованием ввести номер телефона", authorizationPage::checkHeaderText);
     }
 
     @Test
@@ -129,19 +95,15 @@ public class MobileTests extends TestbaseMobile {
             open();
             mainPage.closeAllAdvertising();
         });
-        step("Открыть раздел Скан товаров (значок штрихкода справа от поисковой строки)", () -> {
-            mainPage.openScanSection();
-        });
-        step("Убедиться, что есть надпись Хотите быстро сравнить цену магазину Ozon?", () -> {
-            mainPage.checkTextInHeader();
-        });
+        step("Открыть раздел Скан товаров (значок штрихкода справа от поисковой строки)",
+                mainPage::openScanSection);
+        step("Убедиться, что есть надпись Хотите быстро сравнить цену магазину Ozon?",
+                mainPage::checkTextInHeader);
         step("Нажать кнопку 'Далее', " +
-                "убедиться, что есть надпись 'Отсканируйте наклейку штрихкода на упаковке'", () -> {
-            mainPage.clickNextButtonAndCheckText();
-        });
-        step("Нажать кнопку 'Начать сканирование' и убедиться, что кнопка 'Разрешить' активна", () -> {
-            mainPage.clickNextButtonAndCheckAcceptButton();
-        });
+                "убедиться, что есть надпись 'Отсканируйте наклейку штрихкода на упаковке'",
+                mainPage::clickNextButtonAndCheckText);
+        step("Нажать кнопку 'Начать сканирование' и убедиться, что кнопка 'Разрешить' активна",
+                mainPage::clickNextButtonAndCheckAcceptButton);
     }
 
 }
